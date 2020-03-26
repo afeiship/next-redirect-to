@@ -10,6 +10,5 @@ npm install -S @feizheng/next-redirect-to
 ```js
 import '@feizheng/next-redirect-to';
 
-nx.redirectTo({ from: '/', to: '/home', action: 'replace' })
-//DOCS here!
+nx.redirectTo({ from: '/', to: '/home', replace: true })
 ```
