@@ -2,8 +2,8 @@
  * name: @feizheng/next-redirect-to
  * description: Redirect to path.
  * url: https://github.com/afeiship/next-redirect-to
- * version: 1.0.2
- * date: 2020-03-26 16:42:17
+ * version: 1.0.3
+ * date: 2020-03-26 16:45:03
  * license: MIT
  */
 
@@ -16,11 +16,8 @@
   nx.redirectTo = function(inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var pathname = nx.get(window, 'location.pathname');
-    var action = replace ? 'replace' : 'push';
-    if (!options.history) {
-      nx.error(ERR_MSG);
-      return;
-    }
+    var action = options.replace ? 'replace' : 'push';
+    !options.history && nx.error(ERR_MSG);
     pathname === options.from && options.history[action](options.to);
   };
 

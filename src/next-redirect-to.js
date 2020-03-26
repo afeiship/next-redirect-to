@@ -7,11 +7,8 @@
   nx.redirectTo = function(inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var pathname = nx.get(window, 'location.pathname');
-    var action = replace ? 'replace' : 'push';
-    if (!options.history) {
-      nx.error(ERR_MSG);
-      return;
-    }
+    var action = options.replace ? 'replace' : 'push';
+    !options.history && nx.error(ERR_MSG);
     pathname === options.from && options.history[action](options.to);
   };
 
