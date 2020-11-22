@@ -3,7 +3,7 @@
  * description: Redirect to path.
  * homepage: https://github.com/afeiship/next-redirect-to
  * version: 1.0.0
- * date: 2020-11-22 15:10:12
+ * date: 2020-11-22 15:13:55
  * license: MIT
  */
 
